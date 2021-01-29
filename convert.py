@@ -14,8 +14,32 @@ def convert_temp(unit_in, unit_out, temp):
       convert_temp("c", "f", 0)  =>  32.0
       convert_temp("f", "c", 212) => 100.0
     """
+    
+    unit_in = unit_in.lower()
+    unit_out = unit_out.lower()
 
-    # YOUR CODE HERE
+    if unit_in == 'f':
+      #temp is f let's find out what they want back
+        if unit_out == 'f':
+          #they want f back, heres the formula
+          return temp
+        elif unit_out == 'c':
+          #they want c back, heres the formula
+            return (temp - 32) * 5/9
+        el
+    elif unit_in == 'c':
+        #temp is c let's find out what they want back
+        if unit_out == 'c':
+          #they want c back, heres the formula
+            return temp
+        elif unit_out == 'f':
+          #they want f back, heres the formula
+            return (temp * 9/5) + 32
+    #I didn't understand the unit_in...
+    else:
+        return f"Invalid unit {unit_in}"
+    #I understood the unit_in, but unit_out didn't match any units I know
+    return f"Invalid unit {unit_out}"
 
 
 print("c", "f", 0, convert_temp("c", "f", 0), "should be 32.0")
