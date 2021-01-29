@@ -7,12 +7,12 @@ def print_upper_words(word_list, must_start_with=False):
        only words starting with those letters(non-case-sensitive) will be printed 
     """
 
-    if(must_start_with):
+    if(must_start_with == False):
+        for word in word_list:
+            print(word.upper())
+    else:
         for word in word_list:
             word = word.upper()
             for req in must_start_with:
                 if word[0] == req.upper():
                     print(word)
-    else:
-        for word in word_list:
-            print(word.upper())
