@@ -2,7 +2,10 @@ words = ["hello", "hey", "goodbye", "yo", "eyes"]
 
 
 def print_upper_words(word_list, must_start_with=False):
-    """ Prints an uppercase version of each word in word list"""
+    """ Prints an uppercase version of each word in word list
+    if must_start_with is specified(as a set of letters ex: {'a','b'}) 
+       only words starting with those letters(non-case-sensitive) will be printed 
+    """
 
     if(must_start_with):
         for word in word_list:
